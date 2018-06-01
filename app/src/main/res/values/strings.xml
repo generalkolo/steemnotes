@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Steem Notes</string>
+    <string name="action_settings">Settings</string>
+    <string name="hint">Please enter your STEEM username</string>
+    <string name="title_activity_logged_in">Steemnotes</string>
+    <string name="title_activity_accounts">Accounts</string>
+    <string name="default_steem_username">steemusername</string>
+    <string name="title_activity_settings">Steemians Settings</string>
+    <string name="REQUEST">REQUEST</string>
+    <string name="GETUSERDETAILS">getUserDetails</string>
+
+</resources>

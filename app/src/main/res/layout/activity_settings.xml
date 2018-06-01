@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#94b9b9"
+    tools:context="com.semanientreprise.steemnotes.SettingsActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/posts_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:background="@color/ash_anoda1"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:text="Posts"
+            android:textSize="19sp"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/has_posted_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/posts_text"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:text="Has posted"
+            android:textSize="17sp"
+            android:textColor="@color/black" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/has_posted_text"
+            android:layout_marginStart="10dp"
+            android:background="@color/white" />
+
+        <TextView
+            android:id="@+id/has_replied_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/has_posted_text"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:text="Has replied"
+            android:textSize="17sp"
+            android:textColor="@color/black" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/has_replied_text"
+            android:layout_marginStart="10dp"
+            android:background="@color/white"
+            android:id="@+id/view" />
+
+        <TextView
+            android:id="@+id/got_reply_on_post"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/has_replied_text"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:textSize="17sp"
+            android:paddingTop="5dp"
+            android:text="Got reply on post"
+            android:textColor="@color/black" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/got_reply_on_post"
+            android:layout_marginStart="10dp"
+            android:background="@color/white" />
+
+        <TextView
+            android:id="@+id/got_reply_on_reply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/got_reply_on_post"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:textSize="17sp"
+            android:text="Got reply on reply"
+            android:textColor="@color/black" />
+
+
+        <TextView
+            android:id="@+id/mentions_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/got_reply_on_reply"
+            android:layout_marginBottom="5dp"
+            android:background="@color/ash_anoda1"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:textSize="19sp"
+            android:text="Mentions"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/got_mentioned_in_post"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mentions_text"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:textSize="17sp"
+            android:text="Got mentioned in post"
+            android:textColor="@color/black" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/got_mentioned_in_post"
+            android:layout_marginStart="10dp"
+            android:background="@color/white" />
+
+        <TextView
+            android:id="@+id/got_mentioned_in_reply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/got_mentioned_in_post"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:textSize="17sp"
+            android:paddingTop="5dp"
+            android:text="Got mentioned in reply"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/votes_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/got_mentioned_in_reply"
+            android:layout_marginBottom="5dp"
+            android:textSize="19sp"
+            android:background="@color/ash_anoda1"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:text="Votes"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/got_vote_on_post"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/votes_text"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:textSize="17sp"
+            android:text="Got vote on post"
+            android:textColor="@color/black" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/got_vote_on_post"
+            android:layout_marginStart="10dp"
+            android:background="@color/white" />
+
+        <TextView
+            android:id="@+id/got_vote_on_reply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/got_vote_on_post"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:textSize="17sp"
+            android:text="Got vote on reply"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/transfers_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/got_vote_on_reply"
+            android:layout_marginBottom="5dp"
+            android:background="@color/ash_anoda1"
+            android:paddingBottom="5dp"
+            android:textSize="19sp"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:text="Transfers"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/received_transfer_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/transfers_text"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:textSize="17sp"
+            android:text="Received transfer"
+            android:textColor="@color/black" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/received_transfer_text"
+            android:layout_marginStart="10dp"
+            android:background="@color/white" />
+
+        <TextView
+            android:id="@+id/made_transfer_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/received_transfer_text"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:textSize="17sp"
+            android:text="Made transfer"
+            android:textColor="@color/black" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/made_transfer_text"
+            android:layout_marginStart="10dp"
+            android:background="@color/white" />
+
+        <TextView
+            android:id="@+id/is_powering_down"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/made_transfer_text"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:textSize="17sp"
+            android:paddingTop="5dp"
+            android:text="Is powering down"
+            android:textColor="@color/black" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/is_powering_down"
+            android:layout_marginStart="10dp"
+            android:background="@color/white" />
+
+        <TextView
+            android:id="@+id/powered_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/is_powering_down"
+            android:paddingBottom="5dp"
+            android:textSize="17sp"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:text="Powered up"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/follows_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/powered_up"
+            android:layout_marginBottom="5dp"
+            android:background="@color/ash_anoda1"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:text="Follows"
+            android:textSize="19sp"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/got_followed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/follows_text"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:textSize="17sp"
+            android:text="Got followed"
+            android:textColor="@color/black" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/got_followed"
+            android:layout_marginStart="10dp"
+            android:background="@color/white" />
+
+        <TextView
+            android:id="@+id/got_unfollowed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/got_followed"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:textSize="17sp"
+            android:text="Got unfollowed"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/rewards_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/got_unfollowed"
+            android:layout_marginBottom="5dp"
+            android:background="@color/ash_anoda1"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:text="Rewards"
+            android:textSize="19sp"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/claimed_rewards"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rewards_text"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:textSize="17sp"
+            android:text="Claim rewards"
+            android:textColor="@color/black" />
+
+        <Switch
+            android:id="@+id/has_post_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/has_posted_text"
+            android:layout_alignBottom="@+id/has_posted_text"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="9dp" />
+
+        <Switch
+            android:id="@+id/has_replied_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/has_replied_text"
+            android:layout_alignBottom="@+id/has_replied_text"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="9dp" />
+
+        <Switch
+            android:id="@+id/got_reply_on_post_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/got_reply_on_post"
+            android:layout_alignBottom="@+id/got_reply_on_post"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="9dp" />
+
+        <Switch
+            android:id="@+id/got_reply_on_reply_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/got_reply_on_reply"
+            android:layout_alignBottom="@+id/got_reply_on_reply"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="9dp" />
+
+        <Switch
+            android:id="@+id/got_mentioned_in_post_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/got_mentioned_in_post"
+            android:layout_alignBottom="@+id/got_mentioned_in_post"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="9dp" />
+
+        <Switch
+            android:id="@+id/got_mentioned_in_reply_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/got_mentioned_in_reply"
+            android:layout_alignBottom="@+id/got_mentioned_in_reply"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="9dp" />
+
+        <Switch
+            android:id="@+id/got_vote_on_post_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/got_vote_on_post"
+            android:layout_alignBottom="@+id/got_vote_on_post"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="9dp" />
+
+        <Switch
+            android:id="@+id/got_vote_on_reply_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/got_vote_on_reply"
+            android:layout_alignBottom="@+id/got_vote_on_reply"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="9dp" />
+
+        <Switch
+            android:id="@+id/received_transfer_text_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/received_transfer_text"
+            android:layout_alignBottom="@+id/received_transfer_text"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="9dp" />
+
+        <Switch
+        android:id="@+id/made_transfer_text_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/made_transfer_text"
+        android:layout_alignBottom="@+id/made_transfer_text"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="9dp" />
+
+        <Switch
+        android:id="@+id/powered_up_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/powered_up"
+        android:layout_alignBottom="@+id/powered_up"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="9dp" />
+
+        <Switch
+        android:id="@+id/is_powering_down_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/is_powering_down"
+        android:layout_alignBottom="@+id/is_powering_down"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="9dp" />
+
+        <Switch
+            android:id="@+id/got_followed_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/got_followed"
+            android:layout_alignBottom="@+id/got_followed"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="9dp" />
+
+        <Switch
+            android:id="@+id/got_unfollowed_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/got_unfollowed"
+            android:layout_alignBottom="@+id/got_unfollowed"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="9dp" />
+
+        <Switch
+            android:id="@+id/claimed_rewards_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/claimed_rewards"
+            android:layout_alignBottom="@+id/claimed_rewards"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="9dp" />
+
+    </RelativeLayout>
+</ScrollView>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#94b9b9"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.semanientreprise.steemnotes.AccountActivity"
+    tools:showIn="@layout/activity_account">
+
+    <TextView
+        android:id="@+id/you_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="25dp"
+        android:text="YOU"
+        android:textColor="@color/ash_anoda1"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <View
+        android:id="@+id/view_one"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/you_text"
+        android:layout_marginTop="5dp"
+        android:background="#fff" />
+
+    <RelativeLayout
+        android:id="@+id/main_user_container"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/view_one"
+        android:background="@color/shiny">
+
+        <ImageView
+            android:id="@+id/user_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dp"
+            android:src="@android:drawable/ic_dialog_email" />
+
+        <TextView
+            android:id="@+id/user_steemName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dp"
+            android:layout_toRightOf="@+id/user_img"
+            android:text="@string/default_steem_username"
+            android:textColor="@color/white"
+            android:textSize="17sp" />
+
+        <ImageView
+            android:id="@+id/star_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/user_rank"
+            app:srcCompat="@drawable/ic_star" />
+
+        <TextView
+            android:id="@+id/user_rank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:text="65"
+            android:layout_toLeftOf="@+id/settings_img"
+            android:textColor="@color/white" />
+
+        <ImageView
+            android:id="@+id/settings_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_settings"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view_two"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/main_user_container"
+        android:background="#fff" />
+
+    <TextView
+        android:id="@+id/others_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_two"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="40dp"
+        android:text="OTHERS"
+        android:textColor="@color/ash_anoda1"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <View
+        android:id="@+id/view_three"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/others_text"
+        android:layout_marginTop="5dp"
+        android:background="#fff" />
+
+    <include
+        android:id="@+id/inclue_one"
+        layout="@layout/others_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_three" />
+
+    <include
+        android:id="@+id/inclue_two"
+        layout="@layout/others_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/inclue_one" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/others_recView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_three">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <View
+        android:id="@+id/view_four"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/inclue_two"
+        android:background="#fff" />
+
+</RelativeLayout>
