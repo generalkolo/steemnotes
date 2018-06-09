@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/SteemNotes.iml" filepath="$PROJECT_DIR$/SteemNotes.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/steemnotes.iml" filepath="$PROJECT_DIR$/steemnotes.iml" />
     </modules>
   </component>
 </project>
