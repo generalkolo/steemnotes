@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#94b9b9"
-    tools:context="com.semanientreprise.steemnotes.SettingsActivity">
+    tools:context="com.semanientreprise.steemnotes.screens.settings.activity.SettingsActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
